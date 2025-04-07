@@ -6,11 +6,20 @@ import './Fanta.css'
 
 
 function App() {
+
+  let todos =[
+    {input: 'Go to National library', completed: true},
+    {input: 'Study on how to use React js', completed: false},
+    {input: 'Build Apps with what I learned', completed: false},
+    {input: 'Go Home and be happy', completed: false},
+  ]
+
+
   return (
     <>
-      <Header />
-      <Tabs />
-      <TodoList />
+      <Header todos={todos}/>
+      <Tabs todos={todos}/>
+      <TodoList todos={todos}/>
       <TodoInput />
     </>
   )
